@@ -1,0 +1,145 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.32.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Jaroslaw Gawlik, AGH, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.32.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14.1
+Assembler:       Armasm.exe V6.14.1
+Linker/Locator:  ArmLink.exe V6.14.1
+Library Manager: ArmAr.exe V6.14.1
+Hex Converter:   FromElf.exe V6.14.1
+CPU DLL:         SARMCM3.DLL V5.32.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.4.0
+Target DLL:      Segger\JL2CM3.dll V2.99.38.0
+Dialog DLL:      TARMCM1.DLL V1.14.3.0
+ 
+<h2>Project:</h2>
+C:\Users\PC\Desktop\Sm2_projekt_v2\System_KLO_WERSJA_OSTATECZNA\System_KLO.uvprojx
+Project File Date:  01/27/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14.1', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+compiling i2c.c...
+main.c(3): warning: In file included from...
+./system_kontroli.h(75): warning: no previous extern declaration for non-static variable 'AKTUALNA_LICZ_OSOB' [-Wmissing-variable-declarations]
+int AKTUALNA_LICZ_OSOB = 0; // definicja zmiennej przechowujacej liczbe osob znajdujacych sie aktualnie w obiekcie. 
+    ^
+./system_kontroli.h(75): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int AKTUALNA_LICZ_OSOB = 0; // definicja zmiennej przechowujacej liczbe osob znajdujacych sie aktualnie w obiekcie. 
+^
+./system_kontroli.h(78): warning: no previous extern declaration for non-static variable 'MAKS_LICZ_OSOB' [-Wmissing-variable-declarations]
+int MAKS_LICZ_OSOB = 10;    // definicja zmiennej przechowujacej najwieksza liczbe osob ktora moze znalezc sie w obiekcie. 
+    ^
+./system_kontroli.h(78): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int MAKS_LICZ_OSOB = 10;    // definicja zmiennej przechowujacej najwieksza liczbe osob ktora moze znalezc sie w obiekcie. 
+^
+./system_kontroli.h(83): warning: no previous extern declaration for non-static variable 'u' [-Wmissing-variable-declarations]
+int u = 0;
+    ^
+./system_kontroli.h(83): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int u = 0;
+^
+./system_kontroli.h(84): warning: no previous extern declaration for non-static variable 'i' [-Wmissing-variable-declarations]
+int i = 0;
+    ^
+./system_kontroli.h(84): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int i = 0;
+^
+./system_kontroli.h(85): warning: no previous extern declaration for non-static variable 'o' [-Wmissing-variable-declarations]
+int o = 0;
+    ^
+./system_kontroli.h(85): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int o = 0;
+^
+./system_kontroli.h(86): warning: no previous extern declaration for non-static variable 'p' [-Wmissing-variable-declarations]
+int p = 0;
+    ^
+./system_kontroli.h(86): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int p = 0;
+^
+main.c(13): warning: declaration shadows a variable in the global scope [-Wshadow]
+volatile int i;
+             ^
+./system_kontroli.h(84): note: previous declaration is here
+int i = 0;
+    ^
+main.c(12): warning: no previous prototype for function 'delay_ms' [-Wmissing-prototypes]
+void delay_ms( int n) {
+     ^
+main.c(12): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay_ms( int n) {
+^
+static 
+main.c(110): warning: declaration shadows a variable in the global scope [-Wshadow]
+                DELAY(5000)                                                                                                                                                      // opoznienie czasowe 5[s]
+                ^
+./frdm_bsp.h(35): note: expanded from macro 'DELAY'
+#define DELAY(x)   for(uint32_t i=0;i<(x*10000);i++)__nop();                                    /* wait */
+                                ^
+./system_kontroli.h(84): note: previous declaration is here
+int i = 0;
+    ^
+main.c(114): warning: declaration shadows a variable in the global scope [-Wshadow]
+                DELAY(3000)
+                ^
+./frdm_bsp.h(35): note: expanded from macro 'DELAY'
+#define DELAY(x)   for(uint32_t i=0;i<(x*10000);i++)__nop();                                    /* wait */
+                                ^
+./system_kontroli.h(84): note: previous declaration is here
+int i = 0;
+    ^
+10 warnings generated.
+compiling main.c...
+lcd1602.c(85): warning: no previous prototype for function 'LCD1602_PrintNum' [-Wmissing-prototypes]
+void LCD1602_PrintNum(int number) {
+     ^
+lcd1602.c(85): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void LCD1602_PrintNum(int number) {
+^
+static 
+1 warning generated.
+compiling lcd1602.c...
+assembling startup_MKL05Z4.s...
+compiling system_MKL05Z4.c...
+linking...
+Program Size: Code=3624 RO-data=224 RW-data=8 ZI-data=376  
+".\Objects\rgb_led.axf" - 0 Error(s), 11 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.Kinetis_KLxx_DFP.1.15.0.pack
+                Keil.Kinetis_KLxx_DFP.1.15.0
+                NXP Kinetis KLxx Series Device Support and Examples
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\PC\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\PC\AppData\Local\Arm\Packs\Keil\Kinetis_KLxx_DFP\1.15.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device\Source\system_MKL05Z4.c
+      Source file:   Device\Source\ARM\startup_MKL05Z4.s
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>
